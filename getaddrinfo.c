@@ -21,13 +21,13 @@ getaddrinfo(const char *node, const char *service,
     if (hints != NULL) {
         const struct addrinfo new_hints = {
                                        hints->ai_flags,
-	                               AF_INET,
-				       hints->ai_socktype,
-				       hints->ai_protocol,
-				       hints->ai_addrlen,
-		                       hints->ai_addr,
-				       hints->ai_canonname,
-				       hints->ai_next
+                                       AF_INET,
+                                       hints->ai_socktype,
+                                       hints->ai_protocol,
+                                       hints->ai_addrlen,
+                                       hints->ai_addr,
+                                       hints->ai_canonname,
+                                       hints->ai_next
                                        };
 
         return orig_getaddrinfo(node, service, &new_hints, res);
